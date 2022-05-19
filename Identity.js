@@ -16,35 +16,34 @@ async function identity(){
 }
 
 
-function showId() {
-    
-    for (var i = 0; i < heroes.length; i++) {
-      var myArticle = document.createElement('article');
-      var myH2 = document.createElement('h2');
-      var myPara1 = document.createElement('p');
-      var myPara2 = document.createElement('p');
-      var myPara3 = document.createElement('p');
-      var myList = document.createElement('ul');
-  
-      myH2.textContent = heroes[i].name;
-      myPara1.textContent = 'Secret identity: ' + heroes[i].secretIdentity;
-      myPara2.textContent = 'Age: ' + heroes[i].age;
-      myPara3.textContent = 'Superpowers:';
-  
-      var superPowers = heroes[i].powers;
-      for (var j = 0; j < superPowers.length; j++) {
-        var listItem = document.createElement('li');
-        listItem.textContent = superPowers[j];
-        myList.appendChild(listItem);
-      }
-  
+  function fichePlayers(obj) {
+  const section = document.querySelector('section');
+  const joueurs = obj['players'];
+  // Utilisation de la boucle "for" pour parcourir les objets du tableau
+  for (const joueur of joueurs) {
+
+      // Instanciation des éléments 
+      const myArticle = document.createElement('article');
+      const myH2 = document.createElement('h2');
+      const myPara1 = document.createElement('p');
+      const myPara2 = document.createElement('p');
+
+      joueurs.sort((a, b) => (a.rank > b.rank) ? 1 : (a.rank === b.rank) ? ((a.size > b.size) ? 1 : -1) : -1 )
+
+      myH2.textContent = `${joueur.firstname} - ${joueur.lastname}`;
+      myPara1.textContent = `Ranking : ${joueur.data.rank}`;
+      myPara2.textContent = `Ranking : ${joueur.data.rank}`;
+      
+      // joueurs.sort(function (a, b) {
+      //     return a.rank - b.rank;
+      // });
+
+      // Utilisation de la méthode appendChild pour l'affichage de mon contenu.
       myArticle.appendChild(myH2);
       myArticle.appendChild(myPara1);
-      myArticle.appendChild(myPara2);
-      myArticle.appendChild(myPara3);
-      myArticle.appendChild(myList);
-  
       section.appendChild(myArticle);
-    }
   }
 }
+
+
+identity();
