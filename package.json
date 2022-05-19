@@ -1,0 +1,20 @@
+{
+  "name": "mini-project-php",
+  "version": "1.0.0",
+  "description": "mini projet L'Atlier",
+  "main": "Script.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JulienLrs/mini_project_php.git"
+  },
+  "author": "Julien Lrs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JulienLrs/mini_project_php/issues"
+  },
+  "homepage": "https://github.com/JulienLrs/mini_project_php#readme"
+}
