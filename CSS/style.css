@@ -1,44 +1,38 @@
-/* || general styles */
-
 html {
     font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  body {
-    width: 300px;
+}
+
+body {
+    width: 800px;
     margin: 0 auto;
-  }
-  
-  h2 {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  /* header styles */
-  
-  
-  header p {
-    font-size: 1.3rem;
+}
+
+header p {
+    font-size: 5rem;
     font-weight: bold;
-    text-align: center;
-  }
-  
-  /* section styles */
-  
-  section article {
-    width: 100%;
-    float: left;
-  }
-  
-  section p {
-    margin: 5px 0;
-  }
-  
-  section ul {
-    margin-top: 0;
-  }
-  
-  h2 {
+}
+
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 2.5rem;
-    letter-spacing: -5px;
-    margin-bottom: 10px;
-  }
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+}
+
+#result {
+    max-width: 960px;
+    margin: 0auto;
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+
+.joueur {
+    width: 30%;
+}
+
+.joueur img {
+    max-width: 70%;
+}
+
